@@ -1,0 +1,3 @@
+FirstName,LastName,email,login,isIntegration
+Third,User3,user3@nonexistingemail.com,user3@nonexistingemail.com,true
+Fourth,User4,user4@nonexistingemail.com,user4@nonexistingemail.com,true

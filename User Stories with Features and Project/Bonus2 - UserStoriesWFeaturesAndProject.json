@@ -1,0 +1,66 @@
+{
+  "relations": [
+    {
+      "root": {
+        "mappingName": "UserStoryMapping"
+      },
+      "edges": [
+        {
+          "field": "Feature",
+          "isLookup": true,
+          "mappingName": "FeatureMapping"
+        },
+        {
+          "field": "Project",
+          "mappingName": "ProjectMapping"
+        }
+      ]
+    },
+    {
+      "root": {
+        "mappingName": "FeatureMapping"
+      },
+      "edges": [
+        {
+          "field": "Project",
+          "mappingName": "ProjectMapping"
+        }
+      ]
+    }
+  ],
+  "entitiesMappings": [
+    {
+      "name": "UserStoryMapping",
+      "fieldsMappings": [
+        {
+          "isLookup": true,
+          "tpFieldName": "Name",
+          "csvColumnName": "UserStory"
+        }
+      ],
+      "tpEntityTypeName": "UserStory"
+    },
+    {
+      "name": "FeatureMapping",
+      "fieldsMappings": [
+        {
+          "isLookup": true,
+          "tpFieldName": "Name",
+          "csvColumnName": "Feature"
+        }
+      ],
+      "tpEntityTypeName": "Feature"
+    },
+    {
+      "name": "ProjectMapping",
+      "fieldsMappings": [
+        {
+          "isLookup": true,
+          "tpFieldName": "Name",
+          "csvColumnName": "Project"
+        }
+      ],
+      "tpEntityTypeName": "Project"
+    }
+  ]
+}

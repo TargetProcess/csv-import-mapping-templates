@@ -1,0 +1,20 @@
+{
+	"entitiesMappings": [
+		{
+			"name": "Key Result Mapping",
+			"fieldsMappings": [
+				{
+					"isLookup":true,
+					"tpFieldName": "Name",
+					"csvColumnName": "Name"
+				},
+				{
+					"isLookup":true,
+					"tpFieldName": "Result Type",
+					"csvColumnName": "Result Type"
+				}
+			],
+			"tpEntityTypeName": "KeyResult"
+		}
+	]
+}

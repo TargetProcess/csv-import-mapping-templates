@@ -1,0 +1,56 @@
+{
+  "relations": [
+    {
+      "root": {
+        "mappingName": "UserMapping"
+      },
+      "edges": [
+        {
+          "field": "Location",
+          "mappingName": "LocationMapping"
+        }
+      ]
+    }
+  ],
+  "entitiesMappings": [
+	{
+		"name": "UserMapping",
+        "fieldsMappings": [
+          {
+            "tpFieldName": "FirstName",
+            "csvColumnName": "FirstName"
+          },
+          {
+            "tpFieldName": "LastName",
+            "csvColumnName": "LastName"
+          },
+          {
+            "isLookup": true,
+            "tpFieldName": "email",
+            "csvColumnName": "email"
+          },
+          {
+            "tpFieldName": "login",
+            "csvColumnName": "login"
+          },
+          {
+            "tpFieldName": "isIntegration",
+            "csvColumnName": "isIntegration",
+            "skipTpValidation": true
+          }
+        ],
+		"tpEntityTypeName": "User"
+	},
+    {
+      "name": "LocationMapping",
+      "fieldsMappings": [
+        {
+            "isLookup": true,
+            "tpFieldName": "Name",
+            "csvColumnName": "Location"
+        }
+      ],
+      "tpEntityTypeName": "Location"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "relations": [
+    {
+      "root": {
+        "mappingName": "UserMapping"
+      },
+      "edges": [
+        {
+          "field": "Project",
+          "mappingName": "ProjectMapping"
+        }
+      ]
+    }
+  ],
+  "entitiesMappings": [
+    {
+      "name": "ProjectMapping",
+      "fieldsMappings": [
+        {
+          "isLookup": true,
+          "tpFieldName": "Name",
+          "csvColumnName": "Project"
+        }
+      ],
+      "tpEntityTypeName": "Project"
+    },
+    {
+      "name": "ProjectMemberMapping",
+      "fieldsMappings": [],
+      "tpEntityTypeName": "ProjectMember"
+    },
+    {
+      "name": "UserMapping",
+      "fieldsMappings": [
+        {
+          "isLookup": true,
+          "tpFieldName": "Email",
+          "csvColumnName": "Email"
+        },
+        {
+          "tpFieldName": "login",
+          "csvColumnName": "Email"
+        }
+      ],
+      "tpEntityTypeName": "User"
+    },
+    {
+      "name": "RoleProjectMemberMapping",
+      "fieldsMappings": [
+        {
+          "isLookup": true,
+          "tpFieldName": "Name",
+          "csvColumnName": "RoleProjectMember"
+        }
+      ],
+      "tpEntityTypeName": "Role"
+    },
+    {
+      "name": "RoleMapping",
+      "fieldsMappings": [
+        {
+          "isLookup": true,
+          "tpFieldName": "Name",
+          "csvColumnName": "Role"
+        }
+      ],
+      "tpEntityTypeName": "Role"
+    }
+  ]
+}

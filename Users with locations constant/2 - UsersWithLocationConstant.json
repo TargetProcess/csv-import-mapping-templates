@@ -1,0 +1,39 @@
+{
+  "entitiesMappings": [
+    {
+      "name": "User Mapping",
+      "fieldsMappings": [
+        {
+          "tpFieldName": "FirstName",
+          "csvColumnName": "FirstName"
+        },
+        {
+          "tpFieldName": "LastName",
+          "csvColumnName": "LastName"
+        },
+        {
+          "isLookup": true,
+          "tpFieldName": "email",
+          "csvColumnName": "email"
+        },
+        {
+          "tpFieldName": "login",
+          "csvColumnName": "login"
+        },
+        {
+          "tpFieldName": "isIntegration",
+          "csvColumnName": "isIntegration",
+          "skipTpValidation": true
+        },
+        {
+          "kind": "ConstantReference",
+          "constValue": {
+            "id": 46
+          },
+          "tpFieldName": "Location"
+        }
+      ],
+      "tpEntityTypeName": "User"
+    }
+  ]
+}

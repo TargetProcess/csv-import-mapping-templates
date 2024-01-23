@@ -1,0 +1,15 @@
+{
+	"entitiesMappings": [
+		{
+			"name": "Location Mapping",
+			"fieldsMappings": [
+				{
+					"isLookup":true,
+					"tpFieldName": "Name",
+					"csvColumnName": "Name"
+				}
+			],
+			"tpEntityTypeName": "Location"
+		}
+	]
+}

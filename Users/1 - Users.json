@@ -1,0 +1,27 @@
+{
+  "entitiesMappings": [
+    {
+      "name": "User Mapping",
+      "fieldsMappings": [
+        {
+          "tpFieldName": "FirstName",
+          "csvColumnName": "FirstName"
+        },
+        {
+          "tpFieldName": "LastName",
+          "csvColumnName": "LastName"
+        },
+        {
+          "isLookup": true,
+          "tpFieldName": "email",
+          "csvColumnName": "email"
+        },
+        {
+          "tpFieldName": "login",
+          "csvColumnName": "login"
+        }
+      ],
+      "tpEntityTypeName": "User"
+    }
+  ]
+}

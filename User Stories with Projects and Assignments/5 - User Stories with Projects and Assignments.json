@@ -1,0 +1,138 @@
+{
+  "relations": [
+    {
+      "root": {
+        "mappingName": "UserStoryMapping"
+      },
+      "edges": [
+        {
+          "field": "Project",
+          "mappingName": "ProjectMapping"
+        }
+      ]
+    },
+    {
+      "root": {
+        "mappingName": "ProjectMemberMapping"
+      },
+      "edges": [
+        {
+          "field": "Project",
+          "isLookup": true,
+          "mappingName": "ProjectMapping"
+        },
+        {
+          "field": "User",
+          "isLookup": true,
+          "mappingName": "UserMapping"
+        },
+        {
+          "field": "Role",
+          "isLookup": true,
+          "mappingName": "RoleProjectMemberMapping"
+        }
+      ]
+    },
+    {
+      "root": {
+        "mappingName": "Assignment"
+      },
+      "edges": [
+        {
+          "field": "Assignable",
+          "isLookup": true,
+          "mappingName": "UserStoryMapping"
+        },
+        {
+          "field": "GeneralUser",
+          "isLookup": true,
+          "mappingName": "UserMapping"
+        },
+        {
+          "field": "Role",
+          "isLookup": true,
+          "mappingName": "RoleMapping"
+        }
+      ]
+    }
+  ],
+  "entitiesMappings": [
+    {
+      "name": "UserStoryMapping",
+      "fieldsMappings": [
+        {
+          "isLookup": true,
+          "tpFieldName": "Name",
+          "csvColumnName": "UserStory"
+        }
+      ],
+      "tpEntityTypeName": "UserStory"
+    },
+    {
+      "name": "ProjectMapping",
+      "fieldsMappings": [
+        {
+          "isLookup": true,
+          "tpFieldName": "Name",
+          "csvColumnName": "Project"
+        }
+      ],
+      "tpEntityTypeName": "Project"
+    },
+    {
+      "name": "ProjectMemberMapping",
+      "fieldsMappings": [],
+      "tpEntityTypeName": "ProjectMember"
+    },
+    {
+      "name": "UserMapping",
+      "fieldsMappings": [
+        {
+          "isLookup": true,
+          "tpFieldName": "Email",
+          "csvColumnName": "Email"
+        },
+        {
+          "tpFieldName": "login",
+          "csvColumnName": "Email"
+        },
+        {
+          "tpFieldName": "FirstName",
+          "csvColumnName": "FirstName"
+        },
+        {
+          "tpFieldName": "LastName",
+          "csvColumnName": "LastName"
+        }
+      ],
+      "tpEntityTypeName": "User"
+    },
+    {
+      "name": "RoleProjectMemberMapping",
+      "fieldsMappings": [
+        {
+          "isLookup": true,
+          "tpFieldName": "Name",
+          "csvColumnName": "RoleProjectMember"
+        }
+      ],
+      "tpEntityTypeName": "Role"
+    },
+    {
+      "name": "RoleMapping",
+      "fieldsMappings": [
+        {
+          "isLookup": true,
+          "tpFieldName": "Name",
+          "csvColumnName": "Role"
+        }
+      ],
+      "tpEntityTypeName": "Role"
+    },
+    {
+      "name": "Assignment",
+      "fieldsMappings": [],
+      "tpEntityTypeName": "Assignment"
+    }
+  ]
+}
